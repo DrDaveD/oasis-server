@@ -1,6 +1,6 @@
 Summary: OASIS server package
 Name: oasis-server
-Version: 3.14
+Version: 3.15
 Release: 1%{?dist} 
 Source0: %{name}-%{version}.tar.gz
 License: Apache 2.0
@@ -11,7 +11,7 @@ Url: http://www.opensciencegrid.org
 Obsoletes: oasis-goc
 Requires: python3-lxml
 
-%define cvmfs_version 2.12.6
+%define cvmfs_version 2.13.3
 
 %description
 This package contains OASIS server software for OSG Operations
@@ -137,6 +137,10 @@ This package contains files for oasis-login.opensciencegrid.org
 
 
 %changelog
+* Tue Oct 27 2025 Dave Dykstra <dwd@fnal.gov> - 3.15-1
+- Update to cvmfs and cvmfs-server 2.13.3
+- Change the lock name for generate_replicas to match the script name
+
 * Tue Feb 18 2025 John Thiltges <jthiltges@unl.edu> - 3.14-1
 - Update to cvmfs and cvmfs-server 2.12.6
 
