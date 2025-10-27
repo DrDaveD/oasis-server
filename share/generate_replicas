@@ -2,7 +2,7 @@
 
 # this only runs from cron so a very simple lock file in RAM is sufficient
 mkdir -p /run/cvmfs
-LOCKFILE=/run/cvmfs/generating_whitelists
+LOCKFILE=/run/cvmfs/generating_replicas
 if [ -f $LOCKFILE ]; then
     exit
 fi

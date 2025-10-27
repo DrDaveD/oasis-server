@@ -2,7 +2,7 @@
 # Update vdt working directory with current version
 
 PKG=oasis-server
-VDT=~/work/vdt-native/redhat/branches/devops/$PKG
+VDT=~/work/vdt-native/redhat/branches/24-internal/$PKG
 VERSION="`sed -n 's/^Version: //p' $PKG.spec`"
 FEATURE="`echo $VERSION|cut -d. -f1,2`"
 FILEPATH=$PKG/$FEATURE/$PKG-$VERSION.tar.gz
