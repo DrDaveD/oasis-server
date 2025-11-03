@@ -40,8 +40,10 @@ if ($1 == "http_port") {
 
 # configure multiple workers for multiple services
 setoption("workers", '$WORKERS')
-setoptionparameter("cache_dir", 2, "/var/cache/squid/squid${service_name}-${process_number}")
-setoptionparameter("cache_dir", 3, "100")
+# Only the api is stored in the cache so it needs very little space.
+# The defaults for cache_mem and maximum_object_size_in_memory are
+# sufficient even though it is rock cache.
+setoption("cache_dir", "rock /var/cache/squid/squid${service_name} 500")
 setoptionparameter("access_log", 1, "daemon:/var/log/squid/squid${service_name}/access.log")
 setoption("cache_log", "/var/log/squid/squid${service_name}/cache.log")
 setoption("pid_filename", "/var/run/squid/squid${service_name}.pid")

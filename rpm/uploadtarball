@@ -1,7 +1,7 @@
 #!/bin/bash
 # Upload source tarball to OSG
 
-REM=library.cs.wisc.edu
+REM=osg-sw-submit.chtc.wisc.edu
 PKG=oasis-server
 VERSION="`sed -n 's/^Version: //p' $PKG.spec`"
 TMPD=`mktemp -d /tmp/uploadtarball.XXXXXXXXXX`
